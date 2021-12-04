@@ -46,7 +46,7 @@ def test_part1():
 
   assert gamma_rate == 419
   assert epsilon_rate == 3676
-  assert gamma_rate * epsilon_rate == 1
+  assert gamma_rate * epsilon_rate == 1540244
 
 def test_part00():
   data= """00100
