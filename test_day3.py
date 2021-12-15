@@ -73,24 +73,24 @@ def test_part00():
     for bit in range(5):
       zero_counts = numpy.sum(numpy.transpose(values) == '0',1)
       one_counts = numpy.sum(numpy.transpose(values) == '1',1)
-      print("\t", '0', zero_counts, '1', one_counts)
+      #print("\t", '0', zero_counts, '1', one_counts)
       
       if OXY:
         keep_zero = zero_counts > one_counts
       else:
         keep_zero = zero_counts <= one_counts
 
-      print("\t", "keep zero", keep_zero[bit])
+      #print("\t", "keep zero", keep_zero[bit])
       keep = values[:,bit] == ('0' if keep_zero[bit] else '1')
-      print("\t", values[keep])
-      print("\t", keep)
+      #print("\t", values[keep])
+      #print("\t", keep)
 
       values = values[keep]
       if numpy.size(values,0)<2:
         break
-    print("done", values)
+    #print("done", values)
     value = bitstring.BitArray(values[0] == '1').uint
-    print("OXY" if OXY else "CO2", value)
+    #print("OXY" if OXY else "CO2", value)
 
 
 def test_part2():
@@ -120,8 +120,8 @@ def test_part2():
       values = values[keep]
       if numpy.size(values,0)<2:
         break
-    print("done", values)
+    #print("done", values)
     value = bitstring.BitArray(values[0] == '1').uint
-    print("OXY" if OXY else "CO2", value)
+    #print("OXY" if OXY else "CO2", value)
 
 

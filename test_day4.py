@@ -14,8 +14,8 @@ def run(data, use_any):
 
   bingos = numpy.zeros(boards.shape[0])
 
-  print(numbers)
-  print(boards)
+  #print(numbers)
+  #rint(boards)
   #print(marked)
 
   for number in numbers:
@@ -38,8 +38,8 @@ def run(data, use_any):
 
   board_sums = numpy.sum(boards, where=numpy.invert(marked), axis=(1, 2))
   board_sum = numpy.sum(board_sums * delta_bingos)
-  print("sum", board_sum)
-  print("number", number)
+  #print("sum", board_sum)
+  #print("number", number)
   
   return board_sum * number
 
